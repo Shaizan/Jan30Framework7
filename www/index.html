@@ -4,8 +4,47 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Blank App</title>
+        <link rel="stylesheet" href="css/framework7.bundle.min.css">
     </head>
     <body>
+        
+        <!--App root-->
+        <div id=app>
+            
+            <!--View contains consistent navigation and look it's a template for multiple views fo rth euser-->
+            <div class="view view-main">
+                <div class="page" date-name="home">
+                    <div class="page-content">
+                        Hello!
+                        <div class="list accordion-list">
+    <ul>
+        <li class="accordion-item">
+            <a href="" class="item-link item-content">
+                <div class="item-inner">
+                    <div class="item-title">Item 1</div>
+                </div>
+            </a>
+            <div class="accordion-item-content">Item 1 content ...</div>
+        </li>
+        <li class="accordion-item">
+            <a href="" class="item-link item-content">
+                <div class="item-inner">
+                    <div class="item-title">Item 2</div>
+                </div>
+            </a>
+            <div class="accordion-item-content">Item 2 content ...</div>
+        </li>
+    </ul>
+</div>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </div>
+        
         <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/framework7.bundle.min.js"></script>
+        <script src="js/my-app.js"></script>
     </body>
 </html>
