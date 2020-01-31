@@ -5,44 +5,80 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Blank App</title>
         <link rel="stylesheet" href="css/framework7.bundle.min.css">
+        <link rel="stylesheet" href ="css/framework7-icons.css"> <!--Add this to reference the css you just added for frameowrk 7 icons -->
+        <link rel="stylesheet" href="css/styles.css"> <!--Adding css file to manipulate panels-->
     </head>
     <body>
         
         <!--App root-->
         <div id=app>
             
-            <!--View contains consistent navigation and look it's a template for multiple views fo rth euser-->
+<!--Adding panel-->
+              <!-- Left panel, let it be with reveal effect -->
+            <div class="panel panel-left panel-reveal">
+                ... panel content goes here ...
+            </div>
+
+            <!-- Right panel, with cover effect -->
+            <div class="panel panel-right panel-cover">
+                ... panel content goes here ...
+            </div>
+            
             <div class="view view-main">
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link">
+                                <i class="icon icon-back"></i>
+                                <span>Back</span>
+                            </a>
+                        </div>
+                        <div class="title">Title</div>
+                        <div class="right">
+                             <!--Create link to activate panel-->
+                            <a href="#" class="link panel-open" data-panel="right">
+<!--Adding icon-->
+     <!--Download the zip for framework 7 icons from 
+        https://github.com/framework7io/framework7-icons (click clone or download -- green button, dwnload ZIP)
+        copy the css file to your css folder, copy the fonts folder to your www folder
+    -->
+                
+                                <!--Check out the cheat sheet on this link https://framework7.io/docs/icons.html 
+                                for different icons -->
+                            
+                                <i class="f7-icons">airplane</i> <!--Adds airplane icon-->                          
+                                <span>Fly</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="page" date-name="home">
                     <div class="page-content">
-                        Hello!
-                        <div class="list accordion-list">
-    <ul>
-        <li class="accordion-item">
-            <a href="" class="item-link item-content">
-                <div class="item-inner">
-                    <div class="item-title">Item 1</div>
+                        Hello! We on page 1
+                     </div>
+ <!--Adding toolbar-->
+                   
+                <!---There are examples at the bottom of the page
+                        https://framework7.io/docs/toolbar-tabbar.html
+                ->
+             <!-- Bottom Toolbar -->
+                <div class="toolbar toolbar-bottom">
+                  <div class="toolbar-inner">
+                      
+                      <!--Go to another html in this case page2.html
+                            add routs to javascript too-->
+                      
+                    <a href="#" class="link">Link 1</a> 
+                    <a href="#" class="link">Link 2</a>
+                    <a href="/page2/" class="link">page 2</a>
+                  </div>
                 </div>
-            </a>
-            <div class="accordion-item-content">Item 1 content ...</div>
-        </li>
-        <li class="accordion-item">
-            <a href="" class="item-link item-content">
-                <div class="item-inner">
-                    <div class="item-title">Item 2</div>
-                </div>
-            </a>
-            <div class="accordion-item-content">Item 2 content ...</div>
-        </li>
-    </ul>
-</div>
-                    </div>
+                    
                 </div>
             
             </div>
-            
         </div>
-        
         <script type="text/javascript" src="cordova.js"></script>
         <script src="js/framework7.bundle.min.js"></script>
         <script src="js/my-app.js"></script>
